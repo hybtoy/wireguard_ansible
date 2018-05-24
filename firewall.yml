@@ -18,7 +18,7 @@
      chain: INPUT
      protocol: udp
      match: udp
-     destination_port: 51820
+     destination_port: 443
      ctstate: NEW
      jump: ACCEPT
   
@@ -56,7 +56,7 @@
      table: nat
      chain: POSTROUTING
      source: 10.200.200.0/24
-     out_interface: eth0
+     out_interface: ens3
      jump: MASQUERADE  
 
  - name: Install iptables-persistent
